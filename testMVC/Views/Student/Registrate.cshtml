@@ -1,0 +1,46 @@
+﻿
+@{
+                /**/
+
+                Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Добавление нового студента</title>
+</head>
+<body>
+    <div>
+        <table>
+
+            <form method="post" action="Added" value="@ViewBag.Students" name="Students">
+                <tr>
+                    <td><p>Имя</p></td>
+                    <td><input type="text" name="FirstName" /></td>
+                </tr>
+                <tr>
+                    <td><p>Фамилия</p></td>
+                    <td><input type="text" name="SurName" /></td>
+                </tr>
+                <tr>
+                    <td><p>Возраст</p></td>
+                    <td><input type="text" name="Age" /></td>
+                </tr>
+                <tr>
+                    <td><p>Факультет</p></td>
+                    <td><input type="text" name="Faculty" /></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Зарегистрировать" /></td>
+                    <td></td>
+                </tr>
+
+
+
+        </table>
+    </div>
+</body>
+</html>

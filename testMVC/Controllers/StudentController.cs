@@ -30,6 +30,16 @@ namespace testMVC.Controllers
             return View();
         }
 
+        public ViewResult Registrate()
+        {
+            
+            // Получаем данные из базы.
+            IEnumerable<Student> Students = db.Students;
+            ViewBag.Students = Students;
+
+            return View();
+        }
+
 
         public ActionResult Added(Student student)
         {

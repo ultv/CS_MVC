@@ -11,55 +11,34 @@
     <title>Ведомость студентов</title>
 </head>
 <body>
-    <div>                    
-        <table>
+    <div>
+        <form method="post" action="Delete">
 
-                <form method="post" action="Added" value="@ViewBag.Students" name="Students">               
-                    <tr>
-                        <td><p>Имя</p></td>
-                        <td><input type="text" name="FirstName" /></td>
-                    </tr>
-                    <tr>
-                        <td><p>Фамилия</p></td>
-                        <td><input type="text" name="SurName" /></td>
-                    </tr>
-                    <tr>
-                        <td><p>Возраст</p></td>
-                        <td><input type="text" name="Age" /></td>
-                    </tr>
-                    <tr>
-                        <td><p>Факультет</p></td>
-                        <td><input type="text" name="Faculty" /></td>
-                    </tr>
-                    <tr>
-                        <td><input type="submit" value="Отправить" /></td>
-                        <td></td>
-                    </tr>
-                    
-                    
-
+            <table>
                 <tr>
-                    <td><p>№</p></td>
-                    <td><p>Имя</p></td>
-                    <td><p>Фамилия</p></td>
-                    <td><p>Возраст</p></td>
-                    <td><p>Факультет</p></td>
+                    <td><p style="text-indent: 40px">№</p></td>
+                    <td><p style="text-indent: 40px">Имя</p></td>
+                    <td><p style="text-indent: 40px">Фамилия</p></td>
+                    <td><p style="text-indent: 40px">Возраст</p></td>
+                    <td><p style="text-indent: 40px">Факультет</p></td>
                 </tr>
 
                 @foreach (var b in ViewBag.Students)
                 {
-                <tr>
-                <form method="post" action="Delete">
-                    <td><p>@b.Id</p></td>
-                    <td><p>@b.FirstName</p></td>
-                    <td><p>@b.SurName</p></td>
-                    <td><p>@b.Age</p></td>
-                    <td><p>@b.Faculty</p></td>
-                    <td><p><input type="submit" value="@b.Id" name="Id" /></p></td>
-                </form>
-                </tr>
+                    <tr>
+                        <td><p style="text-indent: 40px">@b.Id</p></td>
+                        <td><p style="text-indent: 40px">@b.FirstName</p></td>
+                        <td><p style="text-indent: 40px">@b.SurName</p></td>
+                        <td><p style="text-indent: 40px">@b.Age</p></td>
+                        <td><p style="text-indent: 40px">@b.Faculty</p></td>
+                        <td><input type="radio" name="Id" value="@b.Id"></td>
+                    </tr>
                 }
-        </table>        
+
+                <tr><td><input type="submit" value="Удалить" /></td></tr>
+            </table>
+            
+        </form>
     </div>
 </body>
 </html>
